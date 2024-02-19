@@ -1,0 +1,188 @@
+# Load default processing options
+imports:
+    - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Processing.yaml' }
+    - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml' }
+    - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml' }
+
+# Add configuration for the editor
+# For complete documentation see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
+editor:
+  config:
+    debug: false
+    importModules:
+      - { module: '@ckeditor/ckeditor5-highlight', exports: ['Highlight'] }
+      - { module: '@ckeditor/ckeditor5-code-block', exports: ['CodeBlock'] }
+      - { module: '@ckeditor/ckeditor5-show-blocks', exports: ['ShowBlocks'] }
+      - { module: '@ckeditor/ckeditor5-font', exports: ['Font', 'FontSize', 'FontFamily', 'FontColor', 'FontBackgroundColor'] }
+      - { module: '@ckeditor/ckeditor5-table', exports: ['Table', 'TableToolbar', 'TableProperties', 'TableCellProperties', 'TableCaption'] }
+      - { module: '@ckeditor/ckeditor5-language', exports: ['TextPartLanguage'] }
+
+    contentsCss: ["EXT:rte_ckeditor/Resources/Public/Css/contents.css", "EXT:typoscript_ce/Resources/Public/Css/rte.css"]
+
+    toolbar:
+      items:
+        - style
+        - heading
+        - textPartLanguage
+        - '|'
+        - bold
+        - italic
+        - subscript
+        - superscript
+        - softhyphen
+        - '|'
+        - bulletedList
+        - numberedList
+        - blockQuote
+        - alignment
+        - '|'
+        - fontFamily
+        - fontSize
+        - fontColor
+        - fontBackgroundColor
+        - '|'
+        - codeBlock
+        - highlight
+        - '|'
+        - insertTable
+        # - tableColumn
+        # - tableRow
+        # - mergeTableCells
+        - '|'
+        - specialCharacters
+        - horizontalLine
+        - link
+        - '|'
+        - showBlocks
+        - findAndReplace
+        - '|'
+        - removeFormat
+        - undo
+        - redo
+        - '|'
+        - sourceEditing
+
+#    toolbarGroups:
+#        - { name: basicstyles, groups: [basicstyles, cleanup] }
+#        - { name: paragraph, groups: [ list, indent, blocks, align, paragraph ] }
+#        - { name: clipboard, groups: [ clipboard, undo ] }
+#        - { name: editing, groups: [ find, selection, spellchecker, editing ] }
+#        - { name: forms, groups: [ forms ] }
+#        - { name: links, groups: [ links ] }
+#        - { name: insert, groups: [ insert ] }
+#        - "/"
+#        - { name: colors, groups: [ colors ] }
+#        - { name: styles, groups: [ styles ] }
+#        - { name: others, groups: [ others ] }
+#        - { name: about, groups: [ about ] }
+#        - { name: document, groups: [ mode, document, doctools ] }
+#        - { name: tools, groups: [ tools, showBlocks ] }
+#        - { name: language, groups: [ textPartLanguage ] }
+#        - { name: font, groups: [ fontFamily, fontColor, fontSize, fontBackgroundColor ]}
+#        - { name: code, groups: [ codeBlock, highlight ]}
+
+    heading:
+      options:
+        - { model: 'paragraph', title: 'Paragraph' }
+        - { model: 'heading2', view: 'h2', title: 'Heading 2' }
+        - { model: 'heading3', view: 'h3', title: 'Heading 3' }
+        - { model: 'formatted', view: 'pre', title: 'Pre-Formatted Text' }
+
+    style:
+      definitions:
+        # block level styles
+        #- { name: 'Orange title H2', element: 'h2', classes: [], styles: { color: 'orange', background: 'blue' } }
+        #- { name: 'Orange title H3', element: 'h3', classes: [], styles: { color: 'orange', background: 'blue' } }
+        #- { name: 'Quote / Citation', element: 'blockquote', classes: [],  }
+        #- { name: 'Code block', element: 'code', classes: [],  }
+        ## Inline styles
+        #- { name: 'Yellow marker', element: 'span', classes: [], styles: { background-color: 'yellow' } }
+
+        - { name: "Lead", element: "p", classes: ['lead'] }
+        - { name: "Small", element: "small", classes: [] }
+        - { name: "Muted", element: "span", classes: ['text-muted'] }
+
+    alignment:
+      options:
+        - { name: 'left', className: 'text-start' }
+        - { name: 'center', className: 'text-center' }
+        - { name: 'right', className: 'text-end' }
+        - { name: 'justify', className: 'text-justify' }
+
+    table:
+      defaultHeadings: { rows: 1 }
+      contentToolbar:
+        - tableColumn
+        - tableRow
+        - mergeTableCells
+        - tableProperties
+        - tableCellProperties
+        - toggleTableCaption
+
+    language: {
+      textPartLanguage: [
+        { title: 'Arabisch', languageCode: 'ar' },
+        { title: 'Englisch', languageCode: 'en' },
+        { title: 'Französisch', languageCode: 'fr' },
+        { title: 'Hebräisch', languageCode: 'he' },
+        { title: 'Italienisch', languageCode: 'it' },
+        { title: 'Spanisch', languageCode: 'es' }
+      ]
+    }
+
+
+    # format_tags: "p;h1;h2;h3;h4;h5;pre"
+    #format_tags: "p;h1;h2;h3;h4;h5"
+
+    #extraPlugins:
+    #  - justify
+    #  - font
+    #  - find
+    #  - textPartLanguage
+    #  - selectall
+    #  - autolink
+    #  - highlight
+
+    #removePlugins:
+    #  - image
+
+    # removeButtons:
+      # - Anchor
+      # - Underline
+      # - Strike
+      # - Save
+      # - NewPage
+      # - Preview
+      # - Print
+      # - Templates
+      # - Find
+      # - Replace
+      # - SelectAll
+      # - Scayt
+      # - CopyFormatting
+      # - Subscript
+      # - Image
+      # - Flash
+      # - HorizontalRule
+      # - Smiley
+      # - PageBreak
+      # - Iframe
+      # - Form
+      # - Checkbox
+      # - Radio
+      # - TextField
+      # - Textarea
+      # - Select
+      # - Button
+      # - ImageButton
+      # - HiddenField
+      # - CreateDiv
+      # - BGColor
+      # - TextColor
+      # - ShowBlocks
+      # - About
+      # - Font
+      # - FontSize
+      # - BidiLtr
+      # - BidiRtl
+      # - Language

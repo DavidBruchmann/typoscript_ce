@@ -1,0 +1,8 @@
+## Due to the features in CKEditor the HTML element
+## 'figcaption' has to be add to the list of allowed tags.
+
+styles {
+    content {
+        allowTags := addToList(figcaption)
+    }
+}

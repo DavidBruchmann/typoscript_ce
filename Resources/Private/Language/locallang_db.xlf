@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-09-02UTC21:23:000">
+        <header>
+            <authorName>David Bruchmann</authorName>
+            <authorEmail>david.bruchmann@gmail.com</authorEmail>
+        </header>
+        <body>
+            <!-- New fields for pages. -->
+			<trans-unit id="pages.heading_content" xml:space="preserve">
+				<source>Header content box</source>
+			</trans-unit>
+			<trans-unit id="pages.show_canonical">
+				<source>Show canonical link</source>
+			</trans-unit>
+            <trans-unit id="pages.robots_all">
+				<source>Allow all, overrides single settings below</source>
+			</trans-unit>
+            <trans-unit id="pages.no_archive">
+				<source>Allow archiving</source>
+			</trans-unit>
+            <trans-unit id="pages.robots_all_formlabel">
+				<source>Allow all, overrides single settings below</source>
+			</trans-unit>
+            <trans-unit id="pages.no_archive_formlabel">
+				<source>Allow archiving</source>
+			</trans-unit>
+            <trans-unit id="pages.ext_script">
+				<source>Page has dynamic content</source>
+			</trans-unit>
+
+
+			<trans-unit id="tx_mrsitepackage_domain_model_faqitem" resname="tx_mrsitepackage_domain_model_faqitem">
+				<source>FAQ Item</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_faqitem.description" resname="tx_mrsitepackage_domain_model_faqitem.description">
+				<source>FAQ Item</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_faqitem.element_headline" resname="tx_mrsitepackage_domain_model_faqitem.element_headline">
+				<source>Element Headline</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_faqitem.element_headline.description" resname="tx_mrsitepackage_domain_model_faqitem.element_headline.description">
+				<source>For a Headline outside of the FAQ boxes but inside the section.</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_faqitem.question_headline" resname="tx_mrsitepackage_domain_model_faqitem.question_headline">
+				<source>Question Headline</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_faqitem.question_headline.description" resname="tx_mrsitepackage_domain_model_faqitem.question_headline.description">
+				<source>Question Headline, leave empty if not applying</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_faqitem.question" resname="tx_mrsitepackage_domain_model_faqitem.question">
+				<source>Question</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_faqitem.question.description" resname="tx_mrsitepackage_domain_model_faqitem.question.description">
+				<source>Question, if this is empty, only the Element Headline is shown.</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_faqitem.answer_headline" resname="tx_mrsitepackage_domain_model_faqitem.answer_headline">
+				<source>Answer Headline</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_faqitem.answer_headline.description" resname="tx_mrsitepackage_domain_model_faqitem.answer_headline.description">
+				<source>Answer Headline, leave empty if not applying</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_faqitem.answer" resname="tx_mrsitepackage_domain_model_faqitem.answer">
+				<source>Answer</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_faqitem.answer.description" resname="tx_mrsitepackage_domain_model_faqitem.answer.description">
+				<source>Answer</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_faq.name" resname="tx_mrsitepackage_faq.name">
+				<source>ManhattanReview FAQ</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_faq.description" resname="tx_mrsitepackage_faq.description">
+				<source>The FAQ is a container of items which are displayed as toggle boxes. Entering the headline in an item record only renders a normal headline within the container.</source>
+			</trans-unit>
+
+			<trans-unit id="tx_mrsitepackage_hero.name" resname="tx_mrsitepackage_hero.name">
+				<source>ManhattanReview Hero</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_hero.description" resname="tx_mrsitepackage_hero.description">
+				<source>Container for large image with two text lines on it.</source>
+			</trans-unit>
+
+			<trans-unit id="tx_mrsitepackage_linkbutton.name" resname="tx_mrsitepackage_linkbutton.name">
+				<source>ManhattanReview Link-Button</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_linkbutton.description" resname="tx_mrsitepackage_linkbutton.description">
+				<source>Button with text und link which both can be defined.</source>
+			</trans-unit>
+
+			<trans-unit id="tx_mrsitepackage_media.name" resname="tx_mrsitepackage_media.name">
+				<source>ManhattanReview Media</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_media.description" resname="tx_mrsitepackage_media.description">
+				<source>Container with headline and several media images, designed for the sidebar.</source>
+			</trans-unit>
+
+			<trans-unit id="tx_mrsitepackage_mediasection.name" resname="tx_mrsitepackage_mediasection.name">
+				<source>ManhattanReview Media Section</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_mediasection.description" resname="tx_mrsitepackage_mediasection.description">
+				<source>Container with headline and several media images, designed as horizontal section or divider.</source>
+			</trans-unit>
+
+			<trans-unit id="tx_mrsitepackage_script.name" resname="tx_mrsitepackage_script.name">
+				<source>ManhattanReview Script</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_script.description" resname="tx_mrsitepackage_script.description">
+				<source>Adding PHP-scripts by key, which has to be known.</source>
+			</trans-unit>
+
+			<trans-unit id="tx_mrsitepackage_domain_model_teaser" resname="tx_mrsitepackage_domain_model_teaser">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_teaser.header" resname="tx_mrsitepackage_domain_model_teaser.header">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_teaser.header.description" resname="tx_mrsitepackage_domain_model_teaser.header.description">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_teaser.subheader" resname="tx_mrsitepackage_domain_model_teaser.subheader">
+				<source>Subheader</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_teaser.subheader.description" resname="tx_mrsitepackage_domain_model_teaser.subheader.description">
+				<source>Subheader</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_teaser.bodytext" resname="tx_mrsitepackage_domain_model_teaser.bodytext">
+				<source>Bodytext</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_teaser.bodytext.description" resname="tx_mrsitepackage_domain_model_teaser.bodytext.description">
+				<source>Bodytext</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_teaser.image" resname="tx_mrsitepackage_domain_model_teaser.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_teaser.image.description" resname="tx_mrsitepackage_domain_model_teaser.image.description">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_teaser.date" resname="tx_mrsitepackage_domain_model_teaser.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_teaser.date.description" resname="tx_mrsitepackage_domain_model_teaser.date.description">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_teaser.header_link" resname="tx_mrsitepackage_domain_model_teaser.header_link">
+				<source>Header Link</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_teaser.header_link.description" resname="tx_mrsitepackage_domain_model_teaser.header_link.description">
+				<source>Header Link</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_teaser.layout" resname="tx_mrsitepackage_domain_model_teaser.layout">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_domain_model_teaser.layout.description" resname="tx_mrsitepackage_domain_model_teaser.layout.description">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_teaser.name" resname="tx_mrsitepackage_teaser.name">
+				<source>ManhattanReview Teaser</source>
+			</trans-unit>
+			<trans-unit id="tx_mrsitepackage_teaser.description" resname="tx_mrsitepackage_teaser.description">
+				<source>The Teaser shows a styled box with header, date, image and text, which can be linked to another page.</source>
+			</trans-unit>
+
+			<trans-unit id="tt_content.tx_extbase_type.Tx_MrSitepackage_Teaser" resname="tt_content.tx_extbase_type.Tx_MrSitepackage_Teaser">
+				<source>Mr Sitepackage Teaser</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

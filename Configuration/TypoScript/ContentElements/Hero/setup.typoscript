@@ -1,0 +1,142 @@
+###################################################
+#### HERO - Setup #################################
+#### This solution requires currently the patch on
+####   https://forge.typo3.org/issues/100849
+#### Date: 2023-05-10 ... 2023-12-08
+###################################################
+plugin.tx_typoscriptce_hero = CONTENT
+plugin.tx_typoscriptce_hero {
+    table = tt_content
+    select {
+        where = AND {#CType}="tx_typoscriptce_hero"
+        orderBy = sorting
+        max = 1
+        begin.dataWrap = {cObj : parentRecordNumber} - 1
+    }
+    renderObj = COA
+    renderObj {
+        stdWrap {
+            # debugFunc = 2
+            # debugData = 1
+            # debug = 1
+            prefixComment = 2|Output of plugin.tx_typoscriptce_hero
+        }
+
+        10 = CASE
+        10 {
+            key.field = layout
+            default = TEXT
+            default.value = block-hero-wrap-aspect-ratio-1920-600
+            900 = TEXT
+            900.value = block-hero-wrap-aspect-ratio-1920-900
+            600 = TEXT
+            600.value = block-hero-wrap-aspect-ratio-1920-600
+            300 = TEXT
+            300.value = block-hero-wrap-aspect-ratio-1920-300
+
+            stdWrap.noTrimWrap = |<div class="hero-wrap hero-wrap-layout-max block-hero-wrap |" |
+        }
+
+        20 = FILES
+        20 {
+            references {
+                table = tt_content
+                uid.field = uid
+                fieldName = image
+            }
+            renderObj = TEXT
+            renderObj {
+                data = file:current:publicUrl
+                stdWrap.noTrimWrap = | style="background-image: url(|)">|
+            }
+        }
+
+        30 = TEXT
+        30.value = <div class="block-hero-content">
+
+        40 = CASE
+        40 {
+            key.field = header_position
+            default = COA
+            default {
+                10 = TEXT
+                10.stdWrap {
+                    field = header
+                    wrap =  <div class="block-hero-content-title"><h2>|</h2></div>
+                    ## wrap is done only when a value exists:
+                    required = 1
+                }
+                20 = TEXT
+                20.stdWrap {
+                    field = subheader
+                    wrap = <div class="block-hero-content-tagline"><p><strong>|</strong></p></div>
+                    ## wrap is done only when a value exists:
+                    required = 1
+                }
+            }
+            sloganTop < .default
+            sloganTop {
+                ## changing the sorting only
+                30 < .10
+                10 >
+            }
+        }
+
+        50 = TEXT
+        50.value = </div></div>
+    }
+}
+
+tt_content.tx_typoscriptce_hero < plugin.tx_typoscriptce_hero
+tt_content.tx_typoscriptce_hero.stdWrap.outerWrap = <section class="tx-typoscriptce-hero">|</section>
+
+tt_content.shortcut.variables.shortcuts.conf.tt_content.tx_typoscriptce_hero = COA
+tt_content.shortcut.variables.shortcuts.conf.tt_content.tx_typoscriptce_hero {
+    10 < plugin.tx_typoscriptce_hero.renderObj
+}
+
+plugin.tx_typoscriptce_hero._CSS_DEFAULT_STYLE (
+    .block-hero-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: inset 0 -5rem 5rem -5rem rgba(0, 32, 78, .5), inset 0 5rem 5rem -5rem rgba(0, 32, 78, .5)
+    }
+    .block-hero-wrap-aspect-ratio-1920-900 {
+        aspect-ratio: 1920 / 900;
+    }
+    .block-hero-wrap-aspect-ratio-1920-600 {
+        aspect-ratio: 1920 / 600;
+    }
+    .block-hero-wrap-aspect-ratio-1920-300 {
+        aspect-ratio: 1920 / 300;
+    }
+    .block-hero-content-title, .block-hero-content-tagline {
+        margin: 2rem 0;
+        text-align: center;
+        font-family: "Adelle Web";
+        font-weight: bold;
+        text-wrap: balance
+    }
+    .block-hero-content-title>*, .block-hero-content-tagline>* {
+        margin: 0;
+        padding: 0;
+        line-height: 1.3;
+        display: inline-block;
+        border-radius: .4rem;
+        box-shadow: 0 0 4rem rgba(0, 32, 78, .35)
+    }
+    .block-hero-content-title>* {
+        padding: .7em 1em;
+        color: #003072;
+        background-color: rgba(255, 255, 255, .85)
+    }
+    .block-hero-content-tagline>* {
+        padding: .446em .638em;
+        color: #fff;
+        background-color: rgba(0, 32, 78, .85)
+    }
+)
